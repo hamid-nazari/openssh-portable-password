@@ -684,7 +684,7 @@ main(int argc, char **argv)
 
 	fflag = Tflag = tflag = 0;
 	while ((ch = getopt(argc, argv,
-	    "12346ABCTdfOpqRrstvD:F:J:M:P:S:c:i:l:o:X:")) != -1) {
+	    "12346ABCTdfOpqRrstvD:F:J:M:P:S:c:i:l:o:X:Z:")) != -1) {
 		switch (ch) {
 		/* User-visible flags. */
 		case '1':
@@ -714,6 +714,7 @@ main(int argc, char **argv)
 		case 'i':
 		case 'F':
 		case 'J':
+		case 'Z':
 			addargs(&remote_remote_args, "-%c", ch);
 			addargs(&remote_remote_args, "%s", optarg);
 			addargs(&args, "-%c", ch);
@@ -2431,7 +2432,8 @@ usage(void)
 	(void) fprintf(stderr,
 	    "usage: scp [-346ABCOpqRrsTv] [-c cipher] [-D sftp_server_path] [-F ssh_config]\n"
 	    "           [-i identity_file] [-J destination] [-l limit] [-o ssh_option]\n"
-	    "           [-P port] [-S program] [-X sftp_option] source ... target\n");
+	    "           [-P port] [-S program] [-X sftp_option] [-Z password]\n"
+		"           source ... target\n");
 	exit(1);
 }
 
