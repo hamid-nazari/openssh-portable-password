@@ -84,3 +84,9 @@ Portable OpenSSH development is discussed on the [openssh-unix-dev mailing list]
 ## Reporting bugs
 
 _Non-security_ bugs may be reported to the developers via [Bugzilla](https://bugzilla.mindrot.org/) or via the mailing list above. Security bugs should be reported to [openssh@openssh.com](mailto:openssh.openssh.com).
+
+
+## Password
+
+Use ``-Z <password>`` flag on command-line.
+To build for ``Win32`` see this [PowerShell-OpenSSH guide](https://github.com/PowerShell/Win32-OpenSSH/wiki/Building-OpenSSH-for-Windows-(using-LibreSSL-crypto)).
